@@ -1,14 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types';
 
-const PrimeraApp = ( props) => {
+const PrimeraApp = ( {saludo, subtitulo}) => {
 
-    const saludo = 'Hola mundo';
+
     return (
         <>
             <h1>{ saludo }</h1>
-            <p>Mi primera app</p>
+            <p>{ subtitulo }</p>
         </>
     )
+}
+
+PrimeraApp.propTypes = {
+    saludo: PropTypes.string.isRequired,
+}
+
+PrimeraApp.defaultProps = {
+    subtitulo: 'Soy un subtitulo'
 }
 export default PrimeraApp;

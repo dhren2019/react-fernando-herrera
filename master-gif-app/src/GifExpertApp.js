@@ -8,6 +8,7 @@ export const GifExpertApp = () => {
     const [categories, setcategories] = useState([ 'Dragon Ball'])
 
 
+    // Input para busqueda implementado
     return (
         <>
             <h2>GifExpertApp</h2>

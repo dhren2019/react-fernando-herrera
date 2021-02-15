@@ -1,30 +1,28 @@
 import React, { useState } from 'react'
-import { AddCategory } from './components/AddCategory'
-import { GifGrid } from './components/GifGrid'
+import { AddCategory } from './components/AddCategory';
+import { GifGrid } from './components/GifGrid';
 
 export const GifExpertApp = () => {
+    
+    const [categories, setCategories] = useState(['One Punch']);
 
-    // const categories = ['One Punch', 'Dragon Ball', 'Samurai X'];
-    const [categories, setcategories] = useState([ 'Dragon Ball'])
-
-
-    // Input para busqueda implementado
     return (
         <>
             <h2>GifExpertApp</h2>
-            <AddCategory setcategories={ setcategories } />
+            <AddCategory setCategories={ setCategories } />
             <hr />
 
-           
             <ol>
                 {
-                    categories.map( category => {
+                    categories.map( category  => (
                         <GifGrid 
-                        key={ category}
-                        category={ category} />
-                    })
+                            key={ category }
+                            category={ category }
+                        />
+                    ))
                 }
             </ol>
+
         </>
     )
 }

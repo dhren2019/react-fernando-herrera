@@ -13,7 +13,7 @@ export const AddCategory = ( {setcategories }) => {
         e.preventDefault();
 
         if ( inputValue.trimEnd().length > 2) {
-            setcategories( cats => [...cats, inputValue]);
+            setcategories( cats => [ inputValue, ...cats]);
             setinputValue('');
         }
         console.log('submit hechor')
